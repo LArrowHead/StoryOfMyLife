@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-#### You can contact me through several different means, but I prefer to be contacted through my E-Mail.
+##### You can contact me through several different means, but I prefer to be contacted through my E-Mail.
 
 [Gmail: waldronlucas@gmail.com](you...@gmail.com).
 
