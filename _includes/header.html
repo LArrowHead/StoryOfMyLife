@@ -1,6 +1,102 @@
 <header id="header">
-	<a href="{{ site.baseurl }}">
-		<img src="{{ "/img/emerald.svg" | prepend: site.baseurl | replace: '//', '/' }}" alt="Emerald Logo">
-	  <h1>emerald</h1>
-	</a>
+	<span id="typed"></span>
+	<script type="module" src="js/jquery-3.3.1.min.js">
+	</script>
+	<script type="module" src="js/typed.js">
+	</script>
+<!--	<script>
+		import Typed from 'typed.js';
+	  var header = {
+			stringsElement: '#typing_text'
+			/*
+ 				* @property {number} typeSpeed type speed in milliseconds
+ 			*/
+			typeSpeed: 100,
+
+			/*
+ 			* @property {number} startDelay time before typing starts in milliseconds
+ 			*/
+			startDelay: 0,
+
+			/*
+ 			* @property {number} backSpeed backspacing speed in milliseconds
+ 			*/
+			backSpeed: 0,
+
+			/*
+ 			* @property {boolean} smartBackspace only backspace what doesn't match the previous string
+ 			*/
+			smartBackspace: true,
+
+			/*
+ 			* @property {boolean} shuffle shuffle the strings
+ 			*/
+			shuffle: false,
+
+			/*
+ 			* @property {number} backDelay time before backspacing in milliseconds
+ 			*/
+			backDelay: 700,
+
+			/*
+ 			* @property {boolean} fadeOut Fade out instead of backspace
+ 			* @property {string} fadeOutClass css class for fade animation
+ 			* @property {boolean} fadeOutDelay Fade out delay in milliseconds
+ 			*/
+			fadeOut: false,
+			fadeOutClass: 'typed-fade-out',
+			fadeOutDelay: 500,
+
+			/*
+ 			* @property {boolean} loop loop strings
+ 			* @property {number} loopCount amount of loops
+ 			*/
+			loop: false,
+			loopCount: Infinity,
+
+			/*
+ 			* @property {boolean} showCursor show cursor
+ 			* @property {string} cursorChar character for cursor
+ 			* @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
+ 			*/
+			showCursor: true,
+			cursorChar: '|',
+			autoInsertCss: true,
+
+			/*
+ 			* @property {string} attr attribute for typing
+ 			* Ex: input placeholder, value, or just HTML text
+ 			*/
+			attr: null,
+
+			/*
+ 			* @property {boolean} bindInputFocusEvents bind to focus and blur if el is text input
+ 			*/
+			bindInputFocusEvents: false,
+
+			/*
+ 				* @property {string} contentType 'html' or 'null' for plaintext
+ 			*/
+			contentType: 'html',
+		}
+		var typed = new Typed(".element", header);
+	</script> -->
+	<style>
+		header {
+				background: url("https://lh3.googleusercontent.com/nSwxGOzDrP2T7Kd11b8b46RyucPvyFSiejf_NRE39yLhx6b5zn-1EXMCQ8c5fgd2J16LWpFqhYZGoNvonkjVkVsGfN9UQuSvuogwdBWQ8GqQv3i6i6lIeixyUModyWp0F-UE24fDK-eBi9TzWJXaUJU4bYH2gTX9SAtqX2BF6f5hBaRGvZ6JBoEUMog17AIwVBMxuJsbqZ0KkOGM19vaRpdZRTyB88zKKHSgEK1ERCQufqWyDnfzfUpwGvsyNTatxhbnO_HxW9kDsyVoZMeRiThztmrDgV-dDTYbMVdQ4UzXHCWdXJuBy_PXDX_UCXUk828D99KF9CWEtwL6ritSPdWgZoy92gKdDFvFe4-fOy-GMkwDl_G6SJH8vf9pVWIEmehkz-uSA8Ykj9b695sLEcwUD7P-Uybzd_EHrSBp1iJbAVdczBpRA2GlrG0B_1bIBHclucbViTDqKuTvDr7OZLtBvyuo3JNL6gBzgzTT3H9LFyaiojmiH2C6C6w5rGv22iwCX4wRnMEQlSfK9cJXawuCAzC2AqSIYPCn2tX0wPHv0e57pK7wou0gVdZJ43P6_sTmmLr_xicXhdSRhA3q-qqTxxouRf7yTLdze-HkGD3z-DfsoRhUOZUX-RujzuJqPx4IP2lNyA1JVnoSmnkBlerED33ZZHkq=w1133-h849-no") no-repeat center;
+				background-size: 100% 100%;
+				height: 630px;
+				text-align: center;
+				text-emphasis-color: black;
+				font-size: 24px;
+		}
+	</style>
+	<div id="typing_text">
+		<p>My name is <strong>Lucas Waldron</strong></p>
+		<p>This is the story of my life</p>
+	</div>
+	<!--<a href="{{ site.baseurl }}">
+		<img src="{{ "/img/germany_home.svg" | prepend: site.baseurl | replace: '//', '/' }}" alt="Germany">
+	  <h3 class ="home-page-title">The Story of My Life</h3>
+	</a> -->
 </header>
