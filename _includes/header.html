@@ -1,9 +1,4 @@
 <header id="header">
-	<span id="typed"></span>
-	<script type="module" src="js/jquery-3.3.1.min.js">
-	</script>
-	<script type="module" src="js/typed.js">
-	</script>
 <!--	<script>
 		import Typed from 'typed.js';
 	  var header = {
@@ -81,6 +76,53 @@
 		}
 		var typed = new Typed(".element", header);
 	</script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<h1 class="ml12">
+		<span class="text-wrapper">
+			<span class="line line1" style="opacity: 0.678533; transform: scaleY(0.357065)"></span>
+				<span class="letters" style="opacity: 0;">W</span>
+				<span class="letters" style="opacity: 0;">e</span>
+				<span class="letters" style="opacity: 0;">l</span>
+				<span class="letters" style="opacity: 0;">c</span>
+				<span class="letters" style="opacity: 0;">o</span>
+				<span class="letters" style="opacity: 0;">m</span>
+				<span class="letters" style="opacity: 0;">e</span>
+				<!--<span class="letters" style="opacity: 0;"></span>
+				<span class="letters" style="opacity: 0;">y</span>
+				<span class="letters" style="opacity: 0;">c</span>
+				<span class="letters" style="opacity: 0;">o</span>
+				<span class="letters" style="opacity: 0;">e</span> -->
+		</span>
+	</h1>
+	<script>
+		// Wrap every letter in a span
+		$('.ml12').each(function(){
+			$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+		});
+
+		anime.timeline({loop: true})
+		.add({
+			targets: '.ml12 .letter',
+			translateX: [40,0],
+			translateZ: 0,
+			opacity: [0,1],
+			easing: "easeOutExpo",
+			duration: 1200,
+			delay: function(el, i) {
+				return 500 + 30 * i;
+			}
+		}).add({
+			targets: '.ml12 .letter',
+			translateX: [0,-30],
+			opacity: [1,0],
+			easing: "easeInExpo",
+			duration: 1100,
+			delay: function(el, i) {
+				return 100 + 30 * i;
+			}
+		});
+	</script>
 	<style>
 		header {
 				background: url("https://lh3.googleusercontent.com/nSwxGOzDrP2T7Kd11b8b46RyucPvyFSiejf_NRE39yLhx6b5zn-1EXMCQ8c5fgd2J16LWpFqhYZGoNvonkjVkVsGfN9UQuSvuogwdBWQ8GqQv3i6i6lIeixyUModyWp0F-UE24fDK-eBi9TzWJXaUJU4bYH2gTX9SAtqX2BF6f5hBaRGvZ6JBoEUMog17AIwVBMxuJsbqZ0KkOGM19vaRpdZRTyB88zKKHSgEK1ERCQufqWyDnfzfUpwGvsyNTatxhbnO_HxW9kDsyVoZMeRiThztmrDgV-dDTYbMVdQ4UzXHCWdXJuBy_PXDX_UCXUk828D99KF9CWEtwL6ritSPdWgZoy92gKdDFvFe4-fOy-GMkwDl_G6SJH8vf9pVWIEmehkz-uSA8Ykj9b695sLEcwUD7P-Uybzd_EHrSBp1iJbAVdczBpRA2GlrG0B_1bIBHclucbViTDqKuTvDr7OZLtBvyuo3JNL6gBzgzTT3H9LFyaiojmiH2C6C6w5rGv22iwCX4wRnMEQlSfK9cJXawuCAzC2AqSIYPCn2tX0wPHv0e57pK7wou0gVdZJ43P6_sTmmLr_xicXhdSRhA3q-qqTxxouRf7yTLdze-HkGD3z-DfsoRhUOZUX-RujzuJqPx4IP2lNyA1JVnoSmnkBlerED33ZZHkq=w1133-h849-no") no-repeat center;
@@ -90,11 +132,17 @@
 				text-emphasis-color: black;
 				font-size: 24px;
 		}
+		.ml12 {
+		  font-weight: 200px;
+		  font-size: 1.2em;
+		  text-transform: uppercase;
+		  letter-spacing: 0.5em;
+		}
+		.ml12 .letter {
+		  display: inline-block;
+		  line-height: 1em;
+		}
 	</style>
-	<div id="typing_text">
-		<p>My name is <strong>Lucas Waldron</strong></p>
-		<p>This is the story of my life</p>
-	</div>
 	<!--<a href="{{ site.baseurl }}">
 		<img src="{{ "/img/germany_home.svg" | prepend: site.baseurl | replace: '//', '/' }}" alt="Germany">
 	  <h3 class ="home-page-title">The Story of My Life</h3>
