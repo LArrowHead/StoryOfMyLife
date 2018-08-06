@@ -76,6 +76,11 @@
 		}
 		var typed = new Typed(".element", header);
 	</script> -->
+	<div class="topbar_nav">
+  	<ul class="topbar_navu1"><a href="#"></a></li>
+  	<ul class="topbar_navu2"><a href="#"></a></li>
+  	<ul class="topbar_navu3"><a href="#"></a></li>
+	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<h1 class="ml12">
@@ -124,19 +129,39 @@
 		});
 	</script>
 	<style>
-		header {
+		.topbar_nav {
+  		position: fixed;
+  		top: 0;
+  		right: 0;
+  		left: 0;
+  		z-index: @zindexFixedNavbar;
+			top: 0px;
+			list-style-type: none;
+			overflow: hidden;
+			background-color: #f2f2f7;
+		}
+		.topbar_nav .topbar_navu1 .topbar_navu2 .topbar_navu3 {
+			float: left;
+			padding-left:  0;
+  		padding-right: 0;
+  		.border-radius(0);
+		}
+		#header {
 				background: url("https://lh3.googleusercontent.com/nSwxGOzDrP2T7Kd11b8b46RyucPvyFSiejf_NRE39yLhx6b5zn-1EXMCQ8c5fgd2J16LWpFqhYZGoNvonkjVkVsGfN9UQuSvuogwdBWQ8GqQv3i6i6lIeixyUModyWp0F-UE24fDK-eBi9TzWJXaUJU4bYH2gTX9SAtqX2BF6f5hBaRGvZ6JBoEUMog17AIwVBMxuJsbqZ0KkOGM19vaRpdZRTyB88zKKHSgEK1ERCQufqWyDnfzfUpwGvsyNTatxhbnO_HxW9kDsyVoZMeRiThztmrDgV-dDTYbMVdQ4UzXHCWdXJuBy_PXDX_UCXUk828D99KF9CWEtwL6ritSPdWgZoy92gKdDFvFe4-fOy-GMkwDl_G6SJH8vf9pVWIEmehkz-uSA8Ykj9b695sLEcwUD7P-Uybzd_EHrSBp1iJbAVdczBpRA2GlrG0B_1bIBHclucbViTDqKuTvDr7OZLtBvyuo3JNL6gBzgzTT3H9LFyaiojmiH2C6C6w5rGv22iwCX4wRnMEQlSfK9cJXawuCAzC2AqSIYPCn2tX0wPHv0e57pK7wou0gVdZJ43P6_sTmmLr_xicXhdSRhA3q-qqTxxouRf7yTLdze-HkGD3z-DfsoRhUOZUX-RujzuJqPx4IP2lNyA1JVnoSmnkBlerED33ZZHkq=w1133-h849-no") no-repeat center;
 				background-size: 100% 100%;
-				height: 630px;
+				height: 570px;
 				text-align: center;
-				text-emphasis-color: black;
+				text-emphasis-color: white;
 				font-size: 24px;
+				border: 12px solid #f2f2f7;
 		}
 		.ml12 {
+			top: -12px;
 		  font-weight: 200px;
-		  font-size: 1.2em;
+		  font-size: 1.4em;
 		  text-transform: uppercase;
-		  letter-spacing: 0.5em;
+		  letter-spacing: 0.4em;
+			color: #145de0
 		}
 		.ml12 .letter {
 		  display: inline-block;
